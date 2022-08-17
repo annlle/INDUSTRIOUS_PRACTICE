@@ -1,52 +1,454 @@
-:root{
-font-size:16px;
-box-sizing:border-box;
+@import url(./icons-style.css);
+
+:root {
+font-size: 18px;
+font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Inter', sans-serif;
 }
 
-.header{
-width: 100%;
-padding: 20px;
+* {
+color:inherit;
+}
+
+body {
+background-image: url(./media/pics/bg.jpg);
+background-color: rgba(255, 255, 255, 0.904);
+background-blend-mode: overlay;
+background-attachment: fixed;
+background-size: cover;
+}
+
+/**********************HEADER******************************************************************/
+.header {
+width: 100vw;
 background-color: #111111;
 color: white;
-font-size:1rem;
+font-size: 1rem;
+padding: 1%;
+display: flex;
+flex-direction: row;  
+justify-content: space-between;
+align-items: stretch;
+position: fixed;
+z-index:2; 
 }
 
-.container{
+h2{
+line-height: 3rem;
+font-size: 1.5rem;
+}
 
+.menu{
+width: 20vw;
+height: 120vh;
+background-color:#111111;
+flex-direction: column;
+position:fixed;
+top:-2.5em;  
+right: 0.1em;
+padding: 50px 20px; 
+line-height: 3em;
+visibility: hidden;
+}
+
+.menu :last-child{
+border-bottom: none;
+}
+
+.menu img{
+filter: opacity(0.5);
+margin-left: 17em;
+
+}
+
+.menu li:hover{
+color:white;
+transition:1s;
+}
+
+.menu img:hover{
+filter:none;
+transition: 1s;
+}
+
+nav:hover .menu{
+visibility: visible;
+}
+.header span{
+font-weight: normal;
+color: rgba(255, 255, 255, 0.589);
+}
+    
+.padding{
+padding: 0.4em;
+}
+/*****************BANNER ***********************************************************************/
+.banner {
+min-height: 60vh;
+max-height: 65vh;
+background-color: #ce1b28;
+width: 100vw;
+margin: 0 auto;
+overflow: hidden;
+position: relative;
+z-index: 1;
+}
+
+.banner h1{
+font-size: 4rem;
+font-weight: lighter;
+line-height: 6rem;
+}
+
+.banner::before, .banner::after{
+display: block;
+content: '';
+opacity: 0.5;
+width: 100vw;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+}
+
+.banner::before {
+background-color: #111111;
+}
+
+.banner::after {
+background: linear-gradient(135deg, #ce1b28 0%, #111111 74%);
+}
+
+.banner video, .banner-text {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+.banner-text {
+z-index: 2;
+}
+
+/********************************FEATURE-CARDS*****************************/
+.col-md-4{
+width: 370px;
+height: 440px;
+margin:50px 40px 60px 70px;
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 10px;
+background-color: white;
+text-align:center;
+}
+    
+.col-md-4 h2{
+font-size: 1.2rem;
+}
+    
+.row{
+display:flex;
+flex-direction: row;
+justify-content: center;
+}
+    
+.article{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 7em;
+}
+
+/******************************PARALLAX***********************************************************/
+.parallax-wrapper {
+background-image:url(./media/pics/cta01.jpg);
+background-color: #ce1b2756;
+background-blend-mode: overlay;
+background-attachment: fixed;
+height: 30vh;
+width: 100%;
+background-size: cover;
+}
+
+.white-text {
+color: white;
+}
+
+.pw{
+text-align:center;
+}
+/************************FEEDBACK-CARDS************************************************************/
+.feedback-wrapper {
+height: 75vh;
+}
+
+.flex-column-center{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+justify-content: center;
+}
+
+p{
+line-height: 2rem;
+}
+
+.border-card{
+border-left: 0.5rem solid rgb(189, 187, 187);
+margin-left: 2rem;
+font-style: italic;
+color:#444444d8;
+}
+
+.ceo{
+margin-top:2em;
+display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center;
+width: 100%;
+}
+    
+.ceo div{
+max-width:20%;
+}
+    
+.ceo p{
+font-size:0.8em;
+margin: 20px;
+}
+
+span{
+color: #ce1b28;
+font-weight: bolder;
+}
+    
+.ceo img{
+border-radius: 50%;
+width:90%;
+}
+    
+.size{
+width: 330px;
+ height: 340px;
+}
+
+.size p{
+margin-right: 2em;
+margin-left: 1em;
+}
+/*********************FOOTER********************************************/
+
+.footer {
+background-color: #111111;
+height: 68vh;
+font-style: oblique;
+text-align: justify;
+}
+
+.footer-article {
+max-width: 50%;
+margin-top: 100px;
+}
+
+.max-width {
+max-width: 80vw;
+margin: 0 auto;
+}
+
+.h2{
+line-height: 3rem;
+}
+
+.opacity{
+color: rgba(255, 255, 255, 0.589);
+}
+
+.flex-row {
+display: flex;    
+flex-flow: row wrap;
+}
+
+.footer ul{
+margin-top: 100px;
+margin-left: 50px;
+}
+
+.footer li{
+line-height: 2.4em;
+}
+
+.border{
+border-bottom: 1px solid rgba(255, 255, 255, 0.664);
+}
+
+.footer li:hover{
+color: #ce1b28;
+transition: 1s;
+}
+
+a{
+text-decoration: none;
+}
+
+
+.social-link a{
+text-decoration: none;
+list-style-type: none;
+}
+
+.mark{
+margin:5rem;
+text-align: center;
+border-top:1px solid rgba(255, 255, 255, 0.664);
+padding:2rem;
+}
+
+
+@media screen and (max-width: 450px)  {
+:root {
+font-size:14px;
+--footer(1rem);
+}
+
+.menu{
+width: 40vw;
+top:-2.5em;  
+right: 0;
+}
+
+.menu img{
+margin-left:9rem;
+}
+
+.banner video{
+display: none;
 }
 
 .banner{
-
+background-image: url(media/pics/banner.jpg); 
+min-height: 40vh;
+max-height: 50vh;
+background-size: cover;
+background-position: center;
 }
 
-.card-wrapper{
-
+.banner h1{
+font-size: 2rem;
+line-height: 4rem;
+}
+.banner span{
+font-weight: lighter;
+margin-left: 3rem;
+margin-right: 3rem;
+text-align: center;
 }
 
-.card{
-
+.article{
+text-align: center;
+margin-top: 2rem;
+margin-left: 2.2rem;
+margin-right: 2.2rem;
+text-align: center;
 }
 
-.parallax{
-
+.article h2{
+font-size: 2rem;
+font-weight: lighter;
 }
 
-.feedback{
-
+.article p{
+margin-left: 3rem;
+margin-right: 3rem;
 }
 
-.feedback-cards{
-
+.row{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
-.footer{
-
+.col-md-4{
+margin:50px 40px 60px;
 }
 
-.link-list{
-
+.parallax-wrapper {
+height: 50vh;
+background-position: center;
+background-attachment: unset;
 }
 
-.social-media-link{
+.parallax-wrapper p{
+margin-left: 3rem;
+margin-right: 3rem;
+}
+
+.feedback-wrapper {
+height: 190vh;
+}
+
+.footer {
+height: 137vh;
+}
+
+.footer-article {
+margin-left:var(--footer);
+max-width: 90vw;
+}
+
+.footer ul{
+margin-top: 100px;
+margin-left:var(--footer);
+}
+
+.mark{
+font-size: 0.89rem;
+margin:2rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
